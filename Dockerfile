@@ -18,7 +18,7 @@ RUN wget https://viva.systems/es/servicio/descargas/?wpdmdl=8074 -O /tmp/viva-de
     && rm /tmp/viva-designer.tar.gz
 
 # add local files
-COPY /root /
+# COPY /root /
 
 # ports and volumes
 EXPOSE 3000
