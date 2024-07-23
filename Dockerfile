@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 # Descargar e instalar Viva Designer
 RUN wget "https://viva.systems/download/vivadesigner11-64-bit-free-debian-deb/?wpdmdl=8041&refresh=668cfa667d4841720515174&ind=0&filename=viva-designer-free-11.0.0-9016_debian_9_x86_64_BETA.deb.zip" -O /tmp/viva-designer.zip \
     && unzip /tmp/viva-designer.zip -d /tmp \
-    && dpkg -i /tmp/*.deb \
+    && find /tmp -name "*.deb" -exec dpkg -i {} \; \
     && rm -rf /tmp/*
 
 # add local files
