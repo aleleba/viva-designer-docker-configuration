@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     openjdk-11-jre \
     wget \
     unzip \
+    libxcb-xinerama0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Descargar e instalar Viva Designer
