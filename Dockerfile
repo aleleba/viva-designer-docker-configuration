@@ -21,7 +21,7 @@ RUN wget "https://viva.systems/download/vivadesigner11-64-bit-free-debian-deb/?w
     && rm -rf /tmp/*
 
 # add local files
-# COPY /root /
+COPY /root /
 
 # ports and volumes
 EXPOSE 3000
