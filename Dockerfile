@@ -1,6 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntunoble
 
-# Instalar dependencias necesarias
+# Instalar dependencias necesarias, incluyendo libusb-0.1-4
 RUN apt-get update && apt-get install -y \
     libstdc++6 \
     libx11-6 \
@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     unzip \
     libxcb-xinerama0 \
+    libusb-0.1-4 \
     && rm -rf /var/lib/apt/lists/*
 
 # Descargar e instalar Viva Designer
