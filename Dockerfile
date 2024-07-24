@@ -1,6 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntunoble
 
-# Instalar dependencias necesarias, incluyendo libusb-0.1-4
+# Instalar dependencias necesarias, incluyendo las de Qt y xcb
 RUN apt-get update && apt-get install -y \
     libstdc++6 \
     libx11-6 \
@@ -13,6 +13,25 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libxcb-xinerama0 \
     libusb-0.1-4 \
+    # Dependencias de Qt y xcb
+    libqt5widgets5 \
+    libqt5gui5 \
+    libqt5core5a \
+    libqt5dbus5 \
+    libxcb-icccm4 \
+    libxcb-image0 \
+    libxcb-keysyms1 \
+    libxcb-randr0 \
+    libxcb-render-util0 \
+    libxcb-render0 \
+    libxcb-shape0 \
+    libxcb-sync1 \
+    libxcb-xfixes0 \
+    libxcb-xinerama0 \
+    libxcb-xkb1 \
+    libxkbcommon-x11-0 \
+    libxkbcommon0 \
+    qt5-gtk-platformtheme \
     && rm -rf /var/lib/apt/lists/*
 
 # Descargar e instalar Viva Designer
